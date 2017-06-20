@@ -1,0 +1,68 @@
+body, html{
+	padding: 0;
+	margin:0;
+}
+header{
+	width: 100%;
+	background-color: #395491;
+	position: fixed;
+}
+/*ocultando botao checkbox*/
+#btn-menu{
+	display: none;
+}
+img{ width: 30px; height: 30px; padding: 5px;}
+/*ocultando o icone menu*/
+header label{
+	display: none;
+	width: 30px;
+	height: 30px;
+	padding: 20px;
+}
+/*quando passar o mouse*/
+header label:hover{
+	cursor: pointer;
+}
+/*formatando lista*/
+.menu ul{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	display: flex;
+	right: 50px;
+}
+/*quando passar o mouse*/
+.menu li:hover{
+	background-color: #3a589d;
+}
+/*formatando links */
+.menu li a{
+	display: block;
+	padding: 15px 20px;
+	text-decoration: none;
+	color: #c2993a;
+}
+
+@media (max-width: 768px) {
+	header label{
+		display: block;
+	}
+	.menu{
+		position: absolute;
+		width: 30%;
+		margin-left: -70%;
+		background-color: #3a589d;
+		transition: all 0.5s;
+	}
+
+	.menu ul{
+		flex-direction: column;
+	}
+	.menu li{
+		border-top: 1px solid #fff;
+	}
+	#btn-menu:checked~.menu{
+		margin: 0;
+	}
+
+}
